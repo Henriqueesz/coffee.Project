@@ -154,7 +154,7 @@ nav {
 }
 .hero {
   min-height: 85vh; /* CONTROLA O TAMANHO DA PRIMEIRA IMAGEM */
-  background: url(../img/leohoho-uskQ8hyZNgQ-unsplash.jpg) center / cover
+  background: url(./img/leohoho-uskQ8hyZNgQ-unsplash.jpg) center / cover
     no-repeat;
 
   display: flex;
