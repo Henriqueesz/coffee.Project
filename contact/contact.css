@@ -116,21 +116,20 @@ nav {
   transform: translateY(-3px);
 }
 .banner {
-  position: relative; /* referência para o h1 */
+  position: relative;
   width: 100%;
-}
+  height: 90vh;
 
-.banner img {
-  width: 100%;
-  height: 900px;
-  display: block;
+  background-image: url("./img/nathan-dumlao-X_bbCAYzlTs-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
 .banner h1 {
   position: absolute;
-  top: 90%;
+  bottom: 40px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 
   color: #eb8a0a;
   font-size: 3rem;
@@ -234,4 +233,136 @@ img {
   text-align: center;
   font-weight: bold;
   color: #000000;
+}
+
+@media (max-width: 768px) {
+  .header-top {
+    height: auto;
+    padding: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .container-nav {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .logo-nav {
+    width: 100px;
+  }
+
+  .social-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .container-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .banner {
+    height: 70vh;
+    background-image: url("./img/second.jpg"); /* imagem alternativa */
+  }
+
+  .banner h1 {
+    font-size: 2.2rem;
+  }
+
+  ul.menu {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  .location-menu {
+    margin-right: 30px;
+  }
+  .email-menu {
+    margin-left: 60px;
+  }
+
+  .logo-footer {
+    width: 200px;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .container-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .banner {
+    height: 70vh;
+    background-image: url("./img/second.jpg"); /* imagem alternativa */
+  }
+
+  .banner h1 {
+    font-size: 2.2rem;
+  }
+
+  ul.menu {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .logo-footer {
+    width: 200px;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .header-top {
+    padding: 15px;
+  }
+
+  .logo-nav {
+    width: 90px;
+  }
+
+  .banner h1 {
+    font-size: 1.8rem;
+    bottom: 20px;
+  }
+
+  .btn-order {
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 14px;
+  }
+
+  .btn-order span {
+    display: none;
+  }
 }
