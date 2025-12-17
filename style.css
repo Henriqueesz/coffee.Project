@@ -260,11 +260,16 @@ p {
   margin-bottom: 20px;
   margin-left: 80px;
 }
+.container-buttons {
+  display: flex;
+  justify-content: flex-end; /* Empurra o conteúdo para a direita */
+  align-items: center;
+  gap: 15px;
+  padding: 0 40px 40px 0; /* Ajusta o respiro na direita */
+  width: 100%;
+}
 .menu-two {
-  display: inline-flex;
-  margin-left: 1650px;
-  margin-top: 150px;
-  margin-bottom: 70px;
+  margin: 0; /* Remove os 150px/70px que você tinha colocado */
   color: #141513;
   font-weight: 600;
   text-decoration: none;
@@ -281,27 +286,57 @@ p {
   font-size: 36px;
   background-color: #e8f3b8;
 }
+/* O PAI: Controla o alinhamento vertical */
+.cta-section {
+  display: flex;
+  flex-direction: column; /* Coloca um item embaixo do outro (Imagem > Botões) */
+  align-items: flex-end; /* TUDO dentro desta seção vai para a DIREITA */
+  width: 100%; /* Ocupa a largura total da tela */
+  padding: 40px; /* Espaço para não encostar nas bordas do navegador */
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho da tela */
+}
+
+/* A IMAGEM: Ocupa o topo */
+.cta-img {
+  width: 100%; /* Ela estica para ocupar a largura da seção */
+  max-height: 8800px; /* Não deixa a imagem ficar alta demais */
+  object-fit: cover; /* Corta a imagem sem esticá-la ou amassá-la */
+  border-radius: 15px; /* Cantos arredondados */
+  margin-bottom: 20px; /* Empurra os botões um pouco para baixo */
+}
+
+.arrow-button {
+  display: flex; /* Coloca o link e a seta um ao lado do outro */
+  align-items: center; /* Alinha o centro do texto com o centro da seta */
+  gap: 15px; /* Cria o espaço entre eles automaticamente */
+}
+
+/* O LINK (Texto) */
 .btn-img {
-  display: inline-block;
-  margin-top: 10px;
-  margin-left: 1650px;
-  margin-bottom: 70px;
+  text-decoration: none;
   color: #141513;
   font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
+  font-size: 18px;
 }
-.btn-img:hover {
-  text-decoration: underline;
-}
+
 .arrow2 {
   width: 70px;
   height: 70px;
-  border-radius: 100px;
+  border-radius: 50%;
   border: none;
-  cursor: pointer;
-  font-size: 36px;
   background-color: #dda261;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.arrow2:hover {
+  background-color: #c48b4d;
+  transform: scale(1.1);
 }
 .logo-footer {
   width: 400px;
@@ -313,18 +348,18 @@ p {
   justify-content: space-between;
 
   padding: 60px 80px;
-  background-color: #ffffff; /* marrom café */
+  background-color: #ffffff;
 }
 .container-footer {
   display: flex;
-  flex-direction: column; /* 👈 ISSO É O SEGREDO */
+  flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 .text-footer {
   color: #57680b;
   font-size: 32px;
-  margin: 0; /* remove empurrões estranhos */
+  margin: 0;
 }
 .text-contact {
   color: #57680b;
